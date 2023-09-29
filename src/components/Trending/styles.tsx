@@ -172,7 +172,7 @@ export const WrapperCardsTrending = styled.div`
     place-items: center;
     align-items: center;
     overflow-x: hidden;
-    padding: 0;
+    padding: 3rem;
   }
 `
 export const ContentCardTrending = styled.div`

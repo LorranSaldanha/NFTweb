@@ -117,6 +117,7 @@ export const ContentButtonsHero = styled.div`
     background: transparent;
     border: solid 0.2rem ${(props) => props.theme.colors.RosaClaro};
     position: relative;
+    /* margin: 0 1rem; */
 
     &::first-letter {
       text-transform: capitalize;
@@ -162,9 +163,9 @@ export const ContentButtonsHero = styled.div`
 
   @media (min-width: ${(props) => props.theme.screenSize.LG}) {
     justify-content: flex-start;
-
     flex-direction: row;
     -ms-flex-direction: row;
+    padding-left: 1rem;
   }
 `
 export const ContentFrameHero = styled.div`

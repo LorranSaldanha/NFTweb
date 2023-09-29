@@ -11,7 +11,20 @@ export const WrapperFooter = styled.main`
   align-items: center;
   gap: 6rem;
   padding: 3rem;
-  border-top: solid ${(props) => props.theme.colors.Claro} 0.02rem;
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(
+      148deg,
+      rgba(255, 255, 255, 0.01) 0%,
+      rgba(255, 255, 255, 0.01) 100%
+    );
+    backdrop-filter: blur(1rem);
+  }
 
   @media (min-width: ${(props) => props.theme.screenSize.MD}) {
     padding: 6rem;
@@ -25,6 +38,7 @@ export const ContentFooter = styled.div`
   justify-content: center;
   align-items: center;
   gap: 2.5rem;
+  z-index: 2;
 
   @media (min-width: ${(props) => props.theme.screenSize.MD}) {
     display: grid;
@@ -92,7 +106,12 @@ export const SocialFields = styled.div`
 
     padding: 0.875rem;
     border-radius: 100%;
-    background: ${(props) => props.theme.colors.Claro};
+    background: linear-gradient(
+      148deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 100%
+    );
+    backdrop-filter: blur(1rem);
 
     h1,
     p {
